@@ -1,13 +1,14 @@
-# React + TypeScript + Vite
+# Jest + Cypress test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This small project is intended to explore unit testing with Jest and e2e tests with Cypress.
 
-Currently, two official plugins are available:
+Routing is done with  [tanstack/react-router](https://tanstack.com/router/v1/docs/overview).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Styling is done with [shadcn](https://ui.shadcn.com/).
 
-## Expanding the ESLint configuration
+
+
+<!-- ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
@@ -23,8 +24,8 @@ export default {
     tsconfigRootDir: __dirname,
   },
 }
-```
+``` -->
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+<!-- - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list -->
