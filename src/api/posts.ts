@@ -1,5 +1,5 @@
-import axios from 'axios'
 import { queryOptions } from '@tanstack/react-query'
+import axios from 'axios'
 
 export type PostType = {
   id: string
@@ -25,7 +25,6 @@ export const fetchPost = async (postId: string) => {
 }
 
 export const fetchPosts = async () => {
-  await new Promise((r) => setTimeout(r, 500))
   return axios
     .get<PostType[]>('https://jsonplaceholder.typicode.com/posts')
     .then((r) => r.data.slice(0, 10))

@@ -1,22 +1,21 @@
 import { postsQueryOptions } from "@/api/posts"
 import { rootRoute } from "@/main"
 import { Post } from "@/pages/post"
-import Posts from "@/pages/posts"
-import { Route } from "@tanstack/react-router"
+import { Route, lazyRouteComponent } from "@tanstack/react-router"
 
 const PostRoute = new Route({
   getParentRoute: () => rootRoute,
   path: '/posts',
-  component: Posts,
-  loader: ({ context: { queryClient } }) =>
-    queryClient.ensureQueryData(postsQueryOptions),
+  component: lazyRouteComponent(() => import('@/pages/posts')),
+  pendingComponent: () => <div>loading posts...</div>,
+  errorComponent: () => <div>error loading posts!</div>,
+  loader: ({ context: { queryClient } }) => queryClient.ensureQueryData(postsQueryOptions)
 })
+
 const PostByIdRoute = new Route({
   getParentRoute: () => rootRoute,
   path: '/posts/$id',
   component: Post,
 })
 
-export {
-  PostRoute, PostByIdRoute
-} 
+export { PostByIdRoute, PostRoute }
