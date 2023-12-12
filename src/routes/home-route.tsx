@@ -1,5 +1,5 @@
+import { rootRoute } from "@/main"
 import { HomePage } from "@/pages/home"
-import { rootRoute } from "@/routes/root"
 import { Route } from "@tanstack/react-router"
 
 const IndexRoute = new Route({
