@@ -8,7 +8,7 @@ export const fetchData = async () => {
   return response.data;
 };
 
-export const postData = async (data: any) => {
+export const postData = async (data: unknown) => {
   // Use Axios post method
   const response = await axios.post('/api/postData', data);
   return response.data;
